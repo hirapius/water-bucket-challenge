@@ -1,0 +1,12 @@
+[package]
+name = "water-bucket-challenge"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+cached = "0.35"
+utoipa = "2.4.2"
+utoipa-swagger-ui = { version = "2.0.2", features = ["actix-web"] }
