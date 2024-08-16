@@ -4,12 +4,12 @@ WORKDIR /usr/src/water-bucket-challenge
 
 COPY Cargo.toml Cargo.lock ./
 
-RUN cargo fetch
-
 COPY . .
 
-RUN cargo build --release
+RUN cargo fetch
+
+RUN cargo install --path . --root /usr/local
 
 EXPOSE 8080
 
-CMD ["./target/release/water-bucket-challenge"]
+CMD ["/usr/local/bin/water-bucket-challenge"]
