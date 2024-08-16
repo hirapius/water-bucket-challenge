@@ -1,4 +1,4 @@
--- wrk -t10 -c20 -d10s -s test_single_payload.lua https://water-bucket-challenge-production.up.railway.app
+-- wrk -t10 -c20 -d10s -s wrk_load_test.lua https://water-bucket-challenge-production.up.railway.app
 wrk.method = "POST"
 wrk.headers["Content-Type"] = "application/json"
 
